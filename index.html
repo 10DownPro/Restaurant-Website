@@ -8,20 +8,377 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Huynh Restaurant</title>
   </head>
+
+  <style>
+
+    body {
+    padding: 0;
+    margin: 0;
+    background: white;
+    }
+
+    .navbar {
+    background:black;
+    }
+
+    .nav-link,
+
+    .navbar-brand {
+    color: #fff;
+    cursor: pointer;
+    }
+
+    .nav-link {
+    margin-right: 1em !important;
+    }
+
+    .nav-link:hover {
+    color: #ffae00f7;
+    }
+
+    .navbar-collapse {
+    justify-content: flex-end;
+    }
+
+    .header {
+    background-image: url('https://s.hdnux.com/photos/75/70/33/16221936/7/1200x0.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    }
+
+    .overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    }
+
+    .description {
+	  left: 50%;
+	  position: absolute;
+	  top: 45%;
+	  transform: translate(-50%, -55%);
+    text-align: center;
+    }
+    
+    .description h1 {
+    color: #ffae00f7;
+    }
+
+    .description p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    }
+
+    h1 {
+    font-family: Georgia;
+    font-size: 80px;
+    color: #EA9800;
+    }
+
+    h2 {
+    font-family: Georgia;
+    font-size: 40px;
+    color: #f9f9f9;
+    text-align: center;
+    }
+
+    h3 {
+    padding-top: 16%;
+    }
+
+    p {
+    padding-right: 100px;
+    }
+
+    .description button {
+    border:1px solid #6ab446;
+    background:#6ab446;
+    border-radius: 0;
+    color:#fff;
+    }
+
+    .description button:hover {
+	  border:1px solid #fff;
+    background:#fff;
+    color:#000;
+    }
+
+    .features {
+	  margin: 4em auto;
+	  padding: 1em;
+	  position: relative;
+    }
+
+    .feature-title {
+	  color: #333;
+	  font-size: 1.3rem;
+	  font-weight: 700;
+	  margin-bottom: 20px;
+	  text-transform: uppercase;
+    }
+
+    .features img {
+	  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+	  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+	  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+	  margin-bottom: 16px;
+    }
+
+    .bannerimage {
+    width: 100%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEnQGWVIA_1J9yLMbcTUpkiC-7D9EBfSFTTRMCI3gx-n1KPohYf0eTohhv8drMzC-S6g&usqp=CAU);
+    height: 405px;
+    background-color: rgb(0, 0, 0);
+    background-position: center;
+    }
+
+    img {
+    padding-right: 200px;
+    padding-top: 25px;
+    }
+
+    .image2 {
+    padding-right: 200px;
+    padding-top: 100px;
+    margin: auto;
+    }
+
+    .pt-5 {
+    background-color: black;
+    color: white;
+    }
+
+    .location_page {
+    padding-top: 75px;
+    padding-bottom: 50px;
+    }
+
+    .text {
+    padding-bottom: 75px;
+    margin: auto;
+    }
+
+    
+
+  </style>
+  
   <body>
    <!-- Just an image -->
-   <nav class="navbar navbar-light" style="background-color: black;">
-  <a class="navbar-brand" href="#">
-    <img src="https://images.sirved.com/ChIJgRlKyCG_QIYRj2aexIUYdJw/HlvjWzSw80.png" width="300" height="150" alt="huynh restaurant logo">
-  </a>
-</nav>
+   <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="http://127.0.0.1:5500/home.html">
+      <img src="https://images.sirved.com/ChIJgRlKyCG_QIYRj2aexIUYdJw/HlvjWzSw80.png" width="400" height="90" alt="huynh restaurant logo">
+    </a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Location">Location</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.doordash.com/store/huynh-restaurant-houston-19514/">Door Dash</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header header container-fluid">
+
+    <div class="overlay"></div>
+    <div class="description">
+      <h1>Huynh Restaurant</h1>
+        <h2>"This is home-style Vietnamese cooking at its best." Houston Chronicle, Critic's Picks
+        </h2>
+        <br>
+        <button class="btn btn-outline-secondary btn-lg">Tell Me More!</button>
+
+    </div>
+
+  </header>
+    
+
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <h3 class="text-uppercase font-weight-bold">Welcome to Huynh's webpage</h3>
+            <p>Huynh is a family run restaurant that serves home-made Vietnamese food in a comfortable urban atmosphere.
+    
+                    Huynh Restaurant has been in Houston for over 10 years. Our EaDo location, just behind the convention center, is easily accessed from 59 or downtown.
+                    
+                    Our menu includes fresh spring rolls, rice plates, noodle bowls, stir-frys, hot soups, and other fresh traditional Vietnamese dishes.</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        
+        <p><img src="https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1200,height=1000,format=auto/https://doordash-static.s3.amazonaws.com/media/restaurant/cover/Huynh_Restaurant-_Houston.png" width="600" height="350" alt="huynh restaurant logo">
+        </p>
+      </div>  
+ 
+    <div id="bannerimage">
+      <img src="images/restaurant.jpeg" width="100" height="100" alt="huynh restaurant">
+    </div>
+
+    <section id="reviews"></section>
+
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-2 text-center">What people say</h2>
+                <p class="mb-5 text-center">Huynh Restaurant Reviews</p>
+            </div>
+            <div class="col-12">
+                <div class="card-columns">
+    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <blockquote class=" ">
+    
+                                <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                <p class=" m-0 text-muted ">
+                                    The food here is made with much more care and talent than we've seen at other Vietnamese restaurants in town... despite Huynh's modern décor and its superb and sometimes creative take on standard Vietnamese dishes, the prices are completely in line with those of its inferiors."
+                                </p>
+                                <footer class="blockquote-footer small p-1">
+                                    <span class="small">Fearless Critic
+                              <cite class="font-weight-bold">2010 HOUSTON RESTAURANT GUIDE</cite>
+                            </span>
+                                </footer>
+    
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <blockquote class=" ">
+    
+                                <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                <p class=" m-0 text-muted ">
+                                    Just when you thought that there was no hope for Old Chinatown, the Huynh family has opened one of the best Vietnamese restaurants in the city, called Huynh."</p>
+                                <footer class="blockquote-footer small p-1">
+                                    <span class="small">Houston Press
+                              <cite class="font-weight-bold">MARCH 10, 2009</cite>
+                            </span>
+                                </footer>
+    
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <blockquote class=" ">
+    
+                                <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                <p class=" m-0 text-muted ">
+                                    Major bang for the buck.</p>
+                                <footer class="blockquote-footer small p-1">
+                                    <span class="small">Houston Chronicle
+                              <cite class="font-weight-bold">CRITIC'S PICK</cite>
+                            </span>
+                                </footer>
+    
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <blockquote class=" ">
+    
+                                <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                <p class=" m-0 text-muted ">
+                                  Best Vietnamese Restaurant.
+                                  Huynh is an easy spot to love.</p>
+                                <footer class="blockquote-footer small p-1">
+                                    <span class="small">Houston Press
+                              <cite class="font-weight-bold">2010 & 2016</cite>
+                            </span>
+                                </footer>
+    
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <blockquote class=" ">
+    
+                                <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                <p class=" m-0 text-muted ">
+    
+                                    One of the best Vietnamese restaurants in the city. </p>
+                                <footer class="blockquote-footer small p-1">
+                                    <span class="small">Houston Press
+                              <cite class="font-weight-bold">MARCH 10, 2009</cite>
+                            </span>
+                                </footer>
+    
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <blockquote class=" ">
+    
+                                <i class="fa fa-quote-right fa-2x text-muted pull-right mt-3 mb-3" aria-hidden="true"></i>
+                                <p class=" m-0 text-muted ">
+                                  Best New Restaurants of 2009, #6 </p>
+                                <footer class="blockquote-footer small p-1">
+                                    <span class="small">Houston Chronicle
+                              <cite class="font-weight-bold">JANUARY 7, 2010</cite>
+                            </span>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+  
+    <div class="location_page">
+      <h2> <a id style= "color:black;">LOCATION</h2></a>
+
+        
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+              <h3 class="text-uppercase font-weight-bold">Huynh Restaurant</h3>
+              <p class="text">
+                912 Saint Emanuel<br>
+                Houston, TX 77003<br>
+                phone – 713-22-HUYNH<br>
+                phone – 713-224-8964<br>
+                Monday - Saturday 11:00-3:30 & 5:00-9:00<br>
+                Closed on Sunday<br>
+                contact – Anny Dang, General Manager<br>
+                email – PhoHuynhGirl@yahoo.com</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          
+          <img src="images/location.jpeg" class="image2"width="600" height="300" alt="huynh restaurant logo">
+          
+        </div>  
+   
+     
+
+
+      <div class="mapouter"><div class="gmap_canvas"><iframe width="1005" height="310" id="gmap_canvas" src="https://maps.google.com/maps?q=912%20Saint%20Emanuel%20Houston,%20TX%2077003&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:310px;width:1005px;}</style><a href="https://www.embedgooglemap.net">html google maps</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:310px;width:1005px;}</style></div></div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
   </body>
 </html>
